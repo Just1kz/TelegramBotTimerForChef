@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  app:
+    build: ./
+    container_name: telegram-bot
+    ports:
+      - '8090:8090'
+    networks:
+      - tg-bot
+
+networks:
+  tg-bot:
+    external: true
+
